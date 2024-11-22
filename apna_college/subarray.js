@@ -1,5 +1,6 @@
-const numbers = [1, -2, 6, -1, 3];
+const numbers = [-2, -3, 4, -1, -2, 1, 5, -3];
 printSubArray(numbers);
+kadansAlgo(numbers);
 function printSubArray(numbers)
 {
     let total = 0;
@@ -46,4 +47,22 @@ function printSubArray(numbers)
     console.log('total subarrays: ', total);
     console.log('maximum: ', maximum_sum);
     console.log('minimum sum: ', minimum_sum);
+}
+
+function kadansAlgo(numbers)
+{
+    let ms = Number.NEGATIVE_INFINITY;
+    let cs = 0;
+
+    for(let i=0;i<numbers.length;i++)
+    {
+        cs = cs + numbers[i];
+
+        if (cs < 0){
+            cs = 0;
+        }
+        ms = Math.max(cs, ms);
+    }
+
+    console.log('Maximum subarray sum: ', ms);
 }
