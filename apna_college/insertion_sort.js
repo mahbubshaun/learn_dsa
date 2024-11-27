@@ -7,13 +7,13 @@ function insertionSort(numbers)
     {
         let curr = numbers[i];
         let prev = i-1;
-
+        //swap elements
         while(prev >= 0 && numbers[prev] > curr)
         {
             numbers[prev+1] = numbers[prev];
             prev--;
         }
-
+        //insert to appropriate position
         numbers[prev+1] = curr;
     }
     return numbers;
