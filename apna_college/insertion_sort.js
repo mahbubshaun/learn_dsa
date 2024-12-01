@@ -15,7 +15,7 @@ function insertionSort(numbers)
         }
         //insert to appropriate position
         numbers[prev+1] = curr;
-        //test test
+        //test test test
     }
     return numbers;
 }
